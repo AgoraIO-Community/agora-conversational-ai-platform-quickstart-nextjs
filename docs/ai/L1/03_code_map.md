@@ -1,0 +1,21 @@
+# Code map
+
+- `src/app/page.tsx`: authenticated shell, workflow routing, and test-call result.
+- `src/components/agent-studio-panel.tsx`: v3 agent creation and merge-patch updates, guarded deletion, extract variables, secret sets, SIP-trunk numbers, campaigns (pause/resume/cancel), and workflow UI.
+- `src/components/project-switcher.tsx`: safe project list, switch, and create UI.
+- `src/components/provider-config-fields.tsx`: provider-specific model, URL, voice, language, and parameter defaults.
+- `src/data/tts-voice-catalogs.ts`: provider voice-field paths and official voice-list links. Scraped catalogs are retained under `src/data/tts-voice-id-options/` for future selector support.
+- `src/components/studio-call-panel.tsx`: one session's status and `analysis.result` polling.
+- `src/components/studio-call-history.tsx`: recent sessions, filtered client-side by agent name (the v3 session list has no agent filter).
+- `src/components/v3-api.ts`: browser fetch wrapper for `/api/v3/*` with error extraction and list-page helpers.
+- `src/app/api/v3/[...resource]/route.ts`: authenticated v3 resource routes backed by the SDK.
+- `src/app/api/projects/route.ts`: authenticated Agora Console project list/create/select API that removes App Certificates from responses.
+- `src/app/api/call/route.ts`: outbound test call as a v3 telephony session.
+- `src/app/api/session/me/route.ts`: identity response.
+- `src/lib/v3-client.ts`: `agora-agents` client for the selected project (App ID + App Certificate) and error JSON.
+- `src/lib/app-credentials.mjs`: resolves the App ID and certificate that sign v3 requests.
+- `src/lib/v3-contract.mjs`: v3 route table, list-query filter, ETag-conditional writes, error mapping, call body.
+- `src/lib/studio-api.ts`: optional Basic-auth console projects (`/dev/v1`) client with safe logs, and the server-only project certificate lookup.
+- `src/lib/env.ts`: App ID and public URL environment access.
+- `src/lib/auth.ts`: SSO/bypass identity and signed session cookies.
+- `src/lib/agora-sso.ts`: Agora SSO integration.
