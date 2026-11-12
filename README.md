@@ -5,8 +5,10 @@ A standalone Next.js application for managing Agora Conversational AI v3
 [`agora-agents`](https://www.npmjs.com/package/agora-agents) SDK
 `3.0.0-alpha.4` low-level v3 client.
 
-> **Preview:** the v3 API and `agora-agents@3.0.0-alpha.4` are pre-release.
-> The `v2` branch keeps the Studio v2 version of this demo.
+> **Preview:** the Conversational AI Platform (v3) API and
+> `agora-agents@3.0.0-alpha.4` are pre-release.
+
+Documentation: [Conversational AI Platform documentation](https://docs.agora.io/en/ai/platform).
 
 The application uses Next.js 16 App Router, React 19, TypeScript, and Tailwind
 CSS. Client components provide the Studio workflow, while Node.js route
